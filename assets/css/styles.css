@@ -996,3 +996,22 @@ body {
     gap: 5px;
   }
 }
+.carousel-control-prev-icon{
+  color: var(--accent-orange);
+}
+/* ===== PAGE LAYOUT ===== */
+.page-section {
+  padding: 48px 0;
+  background: var(--page-bg);
+}
+
+.page-title {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+.grievance{}

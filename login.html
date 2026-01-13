@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .login-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://ntmedia.in/wp-content/uploads/2024/09/Tata-Steel-Indias-largest-blast-furnace-at-Kalinganagar.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 139, 127, 0.7) 0%, rgba(76, 168, 154, 0.7) 100%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 900px;
+            width: 90%;
+            display: flex;
+            position: relative;
+            z-index: 1;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://ntmedia.in/wp-content/uploads/2024/09/Tata-Steel-Indias-largest-blast-furnace-at-Kalinganagar.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 139, 127, 0.85) 0%, rgba(76, 168, 154, 0.85) 100%);
+        }
+
+        .right-section {
+            flex: 1;
+            padding: 60px 50px;
+            background: white;
+        }
+
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text p {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #bbb;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            padding: 15px 15px 15px 45px;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #4ca89a;
+            box-shadow: 0 0 0 0.2rem rgba(76, 168, 154, 0.15);
+        }
+
+        .form-select {
+            padding: 15px 15px 15px 45px;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-select:focus {
+            border-color: #4ca89a;
+            box-shadow: 0 0 0 0.2rem rgba(76, 168, 154, 0.15);
+        }
+
+        .forgot-link {
+            text-align: right;
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-link a {
+            color: #999;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        .forgot-link a:hover {
+            color: #4ca89a;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #4dd0c1 0%, #4ca89a 100%);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(76, 168, 154, 0.3);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 168, 154, 0.4);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .signup-link a {
+            color: #4ca89a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .login-card {
+                flex-direction: column;
+            }
+
+            .left-section {
+                display: none;
+            }
+
+            .right-section {
+                clip-path: none;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="left-section"></div>
+            <div class="right-section">
+                <div class="welcome-text">
+                    <img src="https://pluspng.com/img-png/tata-logo-png-tata-logo-img-vector-1650x1385.png"
+                            alt="Tata" class="tata-logo">
+                    <h2>Welcome</h2>
+                    <p>Log in to your account to continue</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="email" class="form-control" placeholder="awesome@user.com"
+                                value="awesome@user.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" class="form-control" placeholder="••••••••••••••"
+                                value="password123">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-user-tag input-icon"></i>
+                            <select class="form-select">
+                                <option value="">Select Role</option>
+                                <option value="admin">Administrator</option>
+                                <option value="user">User</option>
+                                <option value="manager">Manager</option>
+                                <option value="guest">Guest</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="forgot-link">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                    <button type="submit" class="btn-login">Log In</button>
+                    <div class="signup-link">
+                        Don't have an account? <a href="#">Sign up!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
