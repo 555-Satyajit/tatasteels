@@ -1,16 +1,16 @@
-# Duralux - CRM Admin & Dashboard HTML Template
+# Sonydig - CRM Admin & Dashboard HTML Template
 #### Preview
 
- - [Demo](https://themewagon.github.io/Duralux-admin/)
+ - [Demo](https://themewagon.github.io/Sonydig-admin/)
 
 #### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/Duralux-admin/)
+ - [Download from ThemeWagon](https://themewagon.com/themes/Sonydig-admin/)
 
 ## Getting Started
 
 1. Clone Repository
 ```
-git clone https://github.com/themewagon/Duralux-admin.git
+git clone https://github.com/themewagon/Sonydig-admin.git
 ```
 2. Install Dependencies
 ```
